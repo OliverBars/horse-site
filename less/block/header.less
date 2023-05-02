@@ -1,11 +1,16 @@
-@media (min-width: 320px) {
+@media (min-width: 300px) {
   .header {
     background-image: url(/images/fon-header.png);
     background-position: top center;
     background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 55px;
   }
   .header__nav {
     padding-top: 15px;
+    margin-bottom: 100px;
     &-burger {
       display: flex;
       justify-content: space-between;
@@ -20,19 +25,215 @@
     }
     &-top {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
       flex-direction: row-reverse;
     }
-    &-nav{
-        padding-right: 5px;
+    &-nav {
+      padding-right: 5px;
+      padding-left: 5px;
     }
-    &-telephone{
-        display: none;
+    &-telephone {
+      display: none;
     }
-    &-ul{
-        transform: translateY(-2000%)
-      }
-  }
+    &-ul {
+      transform: translateX(-2000%);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      z-index: 4;
+    }
+    &-ul.active {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 50px;
 
+      transform: translateY(0%);
+      transition: 0.3s;
+      text-align: center;
+
+      text-transform: uppercase;
+    }
+    &-list {
+      margin-bottom: 30px;
+    }
+  }
+  .header__menu {
+    &-link {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+  &-xrest {
+    position: relative;
+    left: 100px;
+    top: 30px;
+    display: none;
+  }
+  &-xrest.active {
+    display: block;
+    z-index: 10;
+  }
+}
+.overlay.active {
+  display: block;
+  z-index: 1;
+}
+
+.header__center-box {
+  text-align: center;
+  &-title {
+    margin-bottom: 30px;
+  }
+  &-paragraph {
+    margin-bottom: 45px;
+  }
+  &-btn {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 480px) {
+  .header__nav {
+    &-telephone {
+      display: block;
+      margin: 0 auto;
+      margin-right: 0;
+    }
+    &-telephone-big {
+      display: none;
+    }
+    &-ul-big {
+      display: none;
+    }
+    &-menu {
+      justify-content: space-between;
+    }
+    &-top {
+      justify-content: flex-end;
+    }
+  }
+  .logo {
+    margin-right: 25px;
+  }
+  .header__center {
+    &-box-title {
+      font-weight: 700;
+      font-size: 33px;
+      line-height: 37px;
+    }
+    &-box-paragraph {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .header {
+    background-image: url("/images/back-480.png");
+    background-position: bottom;
+    &__menu-link {
+      font-size: 25px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    background-image: url("/images/back-768.png") no-repeat center center fixed;
+    background-size: cover;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .header__nav {
+    &-burger {
+      display: none;
+    }
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+    }
+    &-ul {
+      display: block;
+      transform: translateY(0%);
+      position: static;
+      display: flex;
+      align-items: end;
+      margin: 0;
+      padding: 0;
+      padding-top: 30px;
+    }
+    &-telephone-min {
+      display: none;
+    }
+    &-telephone-big {
+      display: block;
+    }
+  }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    &-link {
+      color: #202020;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 13px;
+      margin-left: 20px;
+      position: relative;
+      padding-bottom: 5px;
+    }
+    &-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    &-link:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .header {
+    background-image: url("/images/header-beck.png");
+  }
+  .header__center-box {
+    text-align: left;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    &-title {
+      text-align: left;
+      font-weight: 700;
+      font-size: 57px;
+      line-height: 107%;
+      max-width: 650px;
+    }
+    &-paragraph {
+      margin-left: 40px;
+      max-width: 450px;
+    }
+  }
 }
