@@ -101,6 +101,7 @@ samp {
  */
 small {
   font-size: 80%;
+
 }
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -401,7 +402,7 @@ a {
     bottom: 0;
     right: 0;
     margin: auto;
-    z-index: 4;
+    z-index: 3;
   }
   .header__nav-ul.active {
     font-weight: 400;
