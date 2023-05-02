@@ -357,7 +357,7 @@ a {
 }
 @media (min-width: 300px) {
   .header {
-    background-image: url('images/fon-header.png');
+    background-image: url('/horse-site/images/fon-header.png');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -488,7 +488,7 @@ a {
     line-height: 22px;
   }
   .header {
-    background-image: url("images/back-480.png");
+    background-image: url("/horse-site/images/back-480.png");
     background-position: bottom;
   }
   .header__menu-link {
@@ -497,7 +497,7 @@ a {
 }
 @media (min-width: 768px) {
   .header {
-    background-image: url("images/back-768.png") no-repeat center center fixed;
+    background-image: url("/horse-site/images/back-768.png") no-repeat center center fixed;
     background-size: cover;
     top: 0;
     right: 0;
@@ -561,7 +561,7 @@ a {
 }
 @media (min-width: 1000px) {
   .header {
-    background-image: url("images/header-beck.png");
+    background-image: url("/horse-site/images/header-beck.png");
   }
   .header__center-box {
     text-align: left;
@@ -697,7 +697,7 @@ a {
 }
 @media (min-width: 300px) {
   .way-club {
-    background-image: url("images/back-way-sky.png");
+    background-image: url("/horse-site/images/back-way-sky.png");
     background-size: cover;
     background-position: top center;
     padding-bottom: 65px;
