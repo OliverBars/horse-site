@@ -357,7 +357,7 @@ a {
 }
 @media (min-width: 300px) {
   .header {
-    background-image: url('/horse-site/images/fon-header.png');
+    background-image: url('/horse-site/images/back-480.png');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
